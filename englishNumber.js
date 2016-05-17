@@ -1,13 +1,11 @@
 var englishNumber = function(number) {
 	var   ones = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"],
   			tens = ["ten", "twenty", "thirty", "fory", "fifty", "sixty", "seventy", "eighty", "ninety"],
-  			teens = ["eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"],
-  			numberString = "";
+  			teens = ["eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
 
   function calculateHundreds(number) {
     if (number > 99) {
-      numberString += ones[Math.floor(number/100) - 1] + ' hundred and ';
-      return calculateTens(number % 100);
+      return ones[Math.floor(number/100) - 1] + ' hundred and ' + calculateTens(number % 100);
     } else {
       return calculateTens(number);
     }
@@ -15,11 +13,11 @@ var englishNumber = function(number) {
 
   function calculateTens(number) {
     if (number < 10) {
-      return numberString += ones[number - 1];
+      return ones[number - 1];
     } else if (number < 20) {
-      return numberString += teens[Math.floor(number % 10) - 1];
+      return teens[Math.floor(number % 10) - 1];
     } else {
-      return numberString += tens[Math.floor(number/10) - 1] + '-' + ones[number % 10 - 1];
+      return tens[Math.floor(number/10) - 1] + '-' + ones[number % 10 - 1];
     }
   }
 
