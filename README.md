@@ -22,4 +22,11 @@ Testing
 
 To run tests, open specRunner.html in your browser and the test should automatically run.
 
-Or in the browser use 'for(var i=0; i<1001; i++) { console.log(englishNumber(i)) };' to check all numbers between 0 and 1000.
+Or in the console use 
+
+```sh
+for(var i=0; i < 1001; i++) { 
+  console.log(englishNumber(i));
+}
+```
+to check all numbers between 0 and 1000.
