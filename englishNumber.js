@@ -4,7 +4,7 @@ var englishNumber = function(number) {
   			teens = ["eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
 
   function calculateHundreds(number) {
-    if (number > 99 && number % 100 === 0) {
+    if (number % 100 === 0) {
       return ones[Math.floor(number/100) - 1] + ' hundred';
     } else if (number > 99) {
       return ones[Math.floor(number/100) - 1] + ' hundred and ' + calculateTens(number % 100);

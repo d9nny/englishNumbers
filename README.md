@@ -17,8 +17,9 @@ $ git clone https://github.com/d9nny/englishNumbers
 To Run:
 
 Copy and paste the code from englishNumber.js into a browser console, press 'enter'. Then write 'englishNumber(anyNumberYouChoose)', press 'enter'.
-
 Testing
 -------
 
 To run tests, open specRunner.html in your browser and the test should automatically run.
+
+Or in the browser use 'for(var i=0; i<1001; i++) { console.log(englishNumber(i)) };' to check all numbers between 0 and 1000.
